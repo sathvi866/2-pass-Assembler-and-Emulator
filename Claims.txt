@@ -1,0 +1,192 @@
+/*****************************************************************************
+TITLE: Claims																																
+NAME: M.V.D.SATHVIK
+ROLL NO.: 2301AI34
+Declaration of Authorship
+This txt file, claims.txt, is part of the assignment of CS2102 project at the 
+department of Computer Science and Engg, IIT Patna . 
+*****************************************************************************/
+All the files I submitted asm.cpp , emu.cpp, claims.txt have my name at the start,
+along with declaration of authorship
+
+The evidence for Assembler including the output files from the test examples(test1, test2, test3, test4) and 
+bubblesort has also been uploaded along with 3 Sample tests.
+
+All test files have been tested and working properly.
+
+================
+Files Submitted:
+================
+    => asm.cpp and emu.cpp along with .exe for both these files.
+    => 8 test files including bubblesort along with 36 files(include .o,.L,.log,.trace files)
+    => claims.txt 
+  
+
+=========================
+Compilation Instructions:
+=========================
+
+Compile  in the following way :
+
+    g++ assembler.cpp -o assembler
+    ./assembler 
+	(Give the input file name after running the exe file(it asks))
+
+    g++ emulator.cpp -o emulator
+      Usage: ./emu.exe [option] file.o
+	(Give the input file name after running the exe file(it asks))
+
+=============================
+Program Format and Structure:
+=============================
+
+The Assembler:
+    * Written in C++ language
+    * All Instructions are implemented 
+    * It contains a table of symbols
+    * asm.cpp is the main and only file of my assembler
+    * It is a 2 pass assembler (implemented in asm.cpp)
+    * outputs the required correct information in the form of 3 things :
+          *  the errors are in log file(They will not be displayed in the terminal) if not assembled properly.
+          *  .l file is for listing all the instructions along with their machinecodes
+          *  .o file if for only machine code 
+    * All errors are diagnosed along with thier line numbers
+    * Comments or self descriptive variable names have been used
+    * The Assembler is capable of understanding the values given in decimal  or hexadecimal format
+    * Assembler successfully skips empty lines and comments
+ 
+
+1)
+#Input: test1.asm
+#Output: 
+a. test1.L
+b. test1.log (without any error messages)
+c. test1.o
+
+2)
+#Input:test2.asm
+#Output: 
+a. test2.L
+b. test2.log 
+c. test2.o
+
+error messages:
+ERROR: Duplicate Label at line 4
+WARNING: Incorrect label format at line 10
+ERROR: Unknown Symbol as operand at line 5
+ERROR: Unknown Symbol as operand at line 6
+ERROR: Operand expected at line 7
+ERROR: Operand not expected at line 8
+ERROR: Unknown Symbol as operand at line 9
+ERROR: Mnemonic not defined at line 11
+ERROR: Mnemonic not defined at line 12
+
+
+3)
+#Input: test3.asm
+#Output: 
+a. test3.L
+b. test3.log (without any error messages)
+c. test3.o
+
+4)
+#Input:.test4.asm
+#Output: 
+a. test4.L
+b. test4.log (without any error messages)
+c. test4.o
+
+5)
+#Input:. Sampletest-1.asm
+#Output: 
+a. Sampletest-1.L 
+b. Sampletest-1.log (without any error messages)
+c. Sampletest-1.o
+
+
+6)
+#Input:. Sampletest-2.asm
+#Output: 
+a. Sampletest-2.L 
+b. Sampletest-2.log (without any error messages)
+c. Sampletest-2.o
+
+7)
+#Input:. Sampletest-3.asm
+#Output: 
+a. Sampletest-3.L 
+b. Sampletest-3.log (without any error messages)
+c. Sampletest-3.o
+
+8)
+#Input: MyBubbleSort.asm
+#Output:
+a. MyBubbleSort.l 
+b. MyBubbleSort.log (without any error messages)
+c. MyBubbleSort.o
+
+
+The Emulator:
+    * The emulator is interactive and can run all instructions according to user's input.
+    * Assumes that all the data and set instructions are segregated from other parts of code 
+      else may not run as expected.
+    * Error handling:  Throws error is segmentation fault occurs.
+    * Functionalities:-
+
+Options
+        -trace  show instruction trace
+        -before show memory dump before execution
+        -after  show memory dump after execution
+        -isa    display ISA
+1)
+#Input: test1.o
+#Output: test1.trace
+
+Error message: 
+Infinite loop detected
+3 instructions executed
+
+2)
+#Input: test2.o
+#Output: test2.trace
+0 instructions executed 
+
+3)
+#Input: test3.o
+#Output: test3.trace
+
+4 instructions executed
+
+4)
+#Input: test4.o
+#Output: test4.trace
+
+47653 instructions executed
+
+5)
+#Input: Sampletest-1.o
+#Output: Sampletest-1.trace
+
+41 instructions executed
+
+6)
+#Input: Sampletest-2.o
+#Output: Sampletest-2.trace
+
+3 instructions executed
+
+7)
+#Input: Sampletest-3.o
+#Output: Sampletest-3.trace
+
+11 instructions executed
+
+
+8) 
+#Input: MyBubbleSort.o
+#Output:MyBubbleSort.trace
+
+1439 instructions executed
+
+
+
